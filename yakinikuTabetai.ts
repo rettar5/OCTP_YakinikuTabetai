@@ -30,7 +30,7 @@ export class YakinikuTabetai {
    * @returns {boolean}
    */
   static isValid(tweetData: OdnTweetData): boolean {
-    return tweetData.text.match(/^(他)?人の(お)?(金|かね|財布)で(焼)?(き)?(肉|にく)(が|を)?(食べたい|たべたい)$/gi) ? true : false;
+    return false === tweetData.isRetweet && tweetData.text.match(/^(他)?人の(お)?(金|かね|財布)で(焼)?(き)?(肉|にく)(が|を)?(食べたい|たべたい)$/gi) ? true : false;
   }
 }
 
